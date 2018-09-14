@@ -4,6 +4,7 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
@@ -17,6 +18,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -40,18 +42,14 @@ public class HomeworkController {
     /**
      * 列表
      */
+    @ResponseBody
     @RequestMapping("/list")
-    @RequiresPermissions("homework:list")
-    public R list(@RequestParam Map<String, Object> params) {
+    public List<HomeworkEntity> list () {
         //查询列表数据
-        Query query = new Query(params);
+        HashMap<String, Object> params = new HashMap<String, Object>();
+        List<HomeworkEntity> homeworkEntities = homeworkService.queryList(params);
 
-        List<HomeworkEntity> homeworkList = homeworkService.queryList(query);
-        int total = homeworkService.queryTotal(query);
-
-        PageUtils pageUtil = new PageUtils(homeworkList, total, query.getLimit(), query.getPage());
-
-        return R.ok().put("page", pageUtil);
+        return homeworkEntities;
     }
 
    /* *//**
