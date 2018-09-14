@@ -4,13 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
-import org.hibernate.validator.constraints.NotEmpty;
-
-import com.alibaba.fastjson.JSONArray;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.lhh.common.validator.group.DayHomeWorkGroup;
-import com.lhh.modules.homework.domain.ReadContent;
-import com.lhh.modules.topiccluster.domain.TopicClusterVo;
 
 
 /**
@@ -27,7 +21,7 @@ public class HomeworkEntity implements Serializable {
     //
     private Integer id;
     //教师id
-    @NotEmpty(message = "教师id不能为空", groups = {DayHomeWorkGroup.class})
+//    @NotEmpty(message = "教师id不能为空", groups = {DayHomeWorkGroup.class})
     private String tchId;
     //班级id
     private String[] classIds;
@@ -41,22 +35,22 @@ public class HomeworkEntity implements Serializable {
 //	@NotEmpty(message = "册别信息不能为空", groups = {BoutiqueHomeworkGroup.class})
     private String book;
     //作业类型  1 日常作业 2 口语评测 3 同步练习 4 阶段检测
-    @NotEmpty(message = "作业类型不能为空", groups = {DayHomeWorkGroup.class})
+//    @NotEmpty(message = "作业类型不能为空", groups = {DayHomeWorkGroup.class})
     private String type;
     //标题
 //	@NotNull(message = "标题信息不能为空", groups = {DayHomeWorkGroup.class})
-    @NotEmpty(message = "标题信息不能为空", groups = {DayHomeWorkGroup.class})
+//    @NotEmpty(message = "标题信息不能为空", groups = {DayHomeWorkGroup.class})
     private String title;
     //备注
     private String remark;
     //题目内容
 
     //	@NotEmpty(message = "题目内容不能为空", groups = {DayHomeWorkGroup.class})
-    private JSONArray content;
+//    private JSONArray content;
     //空白答题卡
 //	private String answerCard;
 //	@NotEmpty(message = "答题卡不能为空", groups = {DayHomeWorkGroup.class})
-    private TopicClusterVo[] answerCard;
+//    private TopicClusterVo[] answerCard;
     //完成时间
 //	@NotEmpty(message = "完成时间不能为空", groups = {DayHomeWorkGroup.class})
     private Date finishTime;
@@ -80,7 +74,7 @@ public class HomeworkEntity implements Serializable {
     private Integer delMark = 1;
 
     //语音题内容 存放特殊json对象
-    private ReadContent readContent;
+//    private ReadContent readContent;
     //1 中文评测 2 自由评测 3 英文评测
     private String tinyType;
     //批改类型 1学生自批 2 班级互批 3 组长批 4组内互批
@@ -167,7 +161,7 @@ public class HomeworkEntity implements Serializable {
         this.remark = remark;
     }
 
-    public JSONArray getContent() {
+    /*public JSONArray getContent() {
         return content;
     }
 
@@ -181,7 +175,7 @@ public class HomeworkEntity implements Serializable {
 
     public void setAnswerCard(TopicClusterVo[] answerCard) {
         this.answerCard = answerCard;
-    }
+    }*/
 
     public Date getFinishTime() {
         return finishTime;
@@ -239,13 +233,13 @@ public class HomeworkEntity implements Serializable {
         this.delMark = delMark;
     }
 
-    public ReadContent getReadContent() {
+    /*public ReadContent getReadContent() {
         return readContent;
     }
 
     public void setReadContent(ReadContent readContent) {
         this.readContent = readContent;
-    }
+    }*/
 
     public String getTinyType() {
         return tinyType;
