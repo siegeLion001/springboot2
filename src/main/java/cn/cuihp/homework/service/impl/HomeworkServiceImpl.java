@@ -20,7 +20,7 @@ import cn.cuihp.homework.service.HomeworkService;
 /**
  * 分支提交测试版本冲突制造
  * 分支-cuihp
- * 
+ * 如何解决冲突问题
  */
 
 @Service("homeworkService")
