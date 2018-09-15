@@ -17,6 +17,11 @@ import cn.cuihp.homework.domain.InsertHomeWorkVo;
 import cn.cuihp.homework.entity.HomeworkEntity;
 import cn.cuihp.homework.service.HomeworkService;
 
+/**
+ * 分支提交测试版本冲突制造
+ * 分支-cuihp
+ * 
+ */
 
 @Service("homeworkService")
 public class HomeworkServiceImpl implements HomeworkService {
