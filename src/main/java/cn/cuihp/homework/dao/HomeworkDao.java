@@ -35,6 +35,11 @@ public interface HomeworkDao  {
 
     HomeworkEntity queryObject(Object id);
 
+    /**
+     * 制造冲突   idea提交
+     * @param map
+     * @return
+     */
     List<HomeworkEntity> queryList(Map<String, Object> map);
 
     List<HomeworkEntity> queryList(Object id);
