@@ -68,7 +68,10 @@ public interface HomeworkDao  {
 
     /**
      * 计算总分
-     *
+     *主干页面提交
+     *制造冲突
+     *	
+     *	
      * @return
      */
     Double fullScore(Integer homeworkId);
