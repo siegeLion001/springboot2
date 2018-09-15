@@ -1,26 +1,12 @@
 package cn.cuihp.homework.controller;
 
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-import java.util.Properties;
-import java.util.UUID;
-
-import javax.servlet.http.HttpServletRequest;
-
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.multipart.MultipartFile;
 
 import cn.cuihp.homework.entity.HomeworkEntity;
 import cn.cuihp.homework.service.HomeworkService;
@@ -49,15 +35,31 @@ public class HomeworkController {
      */
     @ResponseBody
     @RequestMapping("/list")
-    public List<HomeworkEntity> list () {
+    public List<HomeworkEntity> list() {
         //查询列表数据
         HashMap<String, Object> params = new HashMap<String, Object>();
         List<HomeworkEntity> homeworkEntities = homeworkService.queryList(params);
-
+        String sssssss = "sssssss"; //ctrl+alt+v  字符串抽取快捷键
+        System.out.println(sssssss);
+        System.out.println(sssssss);
+        System.out.println(sssssss);
+        System.out.println(sssssss);
+        System.out.println(sssssss);
+        System.out.println(sssssss);
+        System.out.println(sssssss);
+        dealImages(homeworkEntities);//方法抽取快捷键  ctrl+alt+M
         return homeworkEntities;
     }
 
-   /* *//**
+    private void dealImages(List<HomeworkEntity> homeworkEntities) {
+        for (HomeworkEntity homeworkEntity : homeworkEntities) {
+            List<String> answerImgs = homeworkEntity.getAnswerImgs();
+            System.out.println("图片处理!");
+            homeworkEntity.setAnswerImgs(answerImgs);
+        }
+    }
+
+    /* *//**
      * 信息
      *//*
     @RequestMapping("/info/{id}")

@@ -41,6 +41,12 @@ public interface HomeworkDao  {
 
     HomeworkEntity queryObject(Object id);
 
+    /**
+     * 制造冲突   idea提交
+     * 页面确认
+     * @param map
+     * @return
+     */
     List<HomeworkEntity> queryList(Map<String, Object> map);
 
     List<HomeworkEntity> queryList(Object id);
@@ -74,7 +80,10 @@ public interface HomeworkDao  {
 
     /**
      * 计算总分
-     *
+     *主干页面提交
+     *制造冲突
+     *	
+     *	
      * @return
      */
     Double fullScore(Integer homeworkId);
