@@ -1,9 +1,5 @@
 package cn.cuihp.homework.service.impl;
 
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -11,13 +7,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import cn.cuihp.homework.dao.HomeworkDao;
-import cn.cuihp.homework.domain.ExcellentHomeworkVo;
-import cn.cuihp.homework.domain.HomeworkVo;
 import cn.cuihp.homework.domain.InsertHomeWorkVo;
 import cn.cuihp.homework.entity.HomeworkEntity;
 import cn.cuihp.homework.service.HomeworkService;
 
-
+/**
+ * 主干内容添加--测试冲突如何解决
+ * 如何解决冲突问题
+ *
+ */
 @Service("homeworkService")
 public class HomeworkServiceImpl implements HomeworkService {
     @Autowired
