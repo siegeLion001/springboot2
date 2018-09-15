@@ -11,7 +11,13 @@ import cn.cuihp.homework.entity.HomeworkEntity;
 
 /**
  * 作业表
- *
+ * 
+ * 注释添加,(分支)
+ * 分支制造冲突,冲突解决联系
+ * cuihp
+ * 
+ * 
+ * 
  * @author m.f
  * @email miaof@lanhaihui.net
  * @date 2018-05-18 09:44:45
