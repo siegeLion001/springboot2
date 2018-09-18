@@ -12,6 +12,10 @@ import cn.cuihp.homework.entity.HomeworkEntity;
 import cn.cuihp.homework.service.HomeworkService;
 
 /**
+ * 分支提交测试版本冲突制造
+ * 分支-cuihp
+ * 如何解决冲突问题
+ *
  * 主干内容添加--测试冲突如何解决
  * 如何解决冲突问题
  *
