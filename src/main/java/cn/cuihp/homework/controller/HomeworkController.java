@@ -47,7 +47,14 @@ public class HomeworkController {
         dealImages(homeworkEntities);//方法抽取快捷键  ctrl+alt+M
         return homeworkEntities;
     }
-
+    /**
+     * siegeLion ctrl+alt+M 快捷键抽取的方法
+     * @name: dealImages
+     * @params: [homeworkEntities]
+     * @return: void
+     * @Author: cuihp
+     * @Date: 2018/9/18
+     */
     private void dealImages(List<HomeworkEntity> homeworkEntities) {
         for (HomeworkEntity homeworkEntity : homeworkEntities) {
             List<String> answerImgs = homeworkEntity.getAnswerImgs();
