@@ -27,7 +27,7 @@ public class HomeworkController {
 
     /**
      * 协作者修改提交
-     * cuihp1208修改提交
+     * siegeLion003 协作者修改提交
      * 列表
      */
     @ResponseBody
